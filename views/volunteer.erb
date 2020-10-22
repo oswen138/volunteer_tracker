@@ -1,0 +1,22 @@
+<div class="container">
+  <p>Volunteer Name</p>
+  <h4><%= @volunteer.name %></h4>
+</div>
+
+<p>
+  <a href="/volunteers/<%= @volunteer.id() %>/edit">Update Volunteer</a>
+</p>
+
+<form action="/volunteers/<%= @volunteer.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Update volunteer name:</label>
+  <input id="name" type="text" name="name">
+  <button type="submit" name="button" class="btn">Update Volunteer</button>
+</form>
+
+<div class="container">
+  <p>Go back <a href="/">Home</a></p>
+</div>
+
+
+

@@ -1,0 +1,30 @@
+<h1>Volunteer Tracker</h1>
+
+<div class="container">
+  <!-- <a href="/projects">
+    View Projects
+  </a>
+  <a href="/projects/new">
+    Add new Project
+  </a> -->
+  <div class="current-projects">
+    <h3>Current Projects</h3>
+      <h5>List of projects:</h5>
+      <ul>
+        <% @projects.each() do |project| %>
+          <li><a href="/projects/<%= project.id() %>"><%= project.title() %></a></li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="new-projects">
+    <h3>Add a new project</h3>
+    <form action="/" method="post">
+      <label for="name">Project Name</label>
+      <input id="name" name="title" type="text">
+
+      <button type="submit">Create Project!</button>
+    </form>
+  </div>
+
+</div>

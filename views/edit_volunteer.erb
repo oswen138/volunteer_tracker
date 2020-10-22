@@ -1,0 +1,13 @@
+<h1>Update volunteer name <%= @volunteer.name() %></h1>
+
+<form action="/volunteers/<%= @volunteer.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Update volunteer name:</label>
+  <input id="name" type="text" name="name">
+  <button type="submit" name="button" class="btn">Update Name</button>
+</form>
+
+<form action="/volunteers/<%= @volunteer.id() %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" name="button" class="btn">Delete Volunteer</button>
+</form>
